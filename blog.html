@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Jai Bajrangbali</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-post {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-post img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 15px;
+        }
+
+        .blog-content h3 {
+            font-size: 1.5em;
+            color: #ff9800;
+            margin: 0;
+        }
+
+        .blog-content p {
+            color: #555;
+            margin: 10px 0;
+            font-size: 1em;
+        }
+
+        .blog-content a {
+            display: inline-block;
+            margin-top: 10px;
+            color: white;
+            background-color: #ff9800;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .blog-content a:hover {
+            background-color: #e68900;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Jai Bajrangbali Hotel - Blog</div>
+
+    <div class="container">
+        <h2>Our Latest Blogs</h2>
+        <div class="blog-grid">
+            <div class="blog-post">
+                <img src="https://static.vecteezy.com/system/resources/previews/037/349/394/non_2x/ai-generated-this-is-a-male-chef-on-a-commercial-cooking-stove-free-photo.jpg" alt="Perfect Indian Cuisine">
+                <div class="blog-content">
+                    <h3>5 Tips for Perfect Indian Cuisine</h3>
+                    <p>Discover the secrets to mastering traditional Indian dishes with ease and authenticity.</p>
+                    <a href="https://www.couponhippo.in/blog/indian-food-cooking-tips" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="https://img.freepik.com/premium-photo/colorful-bowl-fresh-vegetables-with-fork-few-cherry-tomatoes-dark-surface_14117-735263.jpg" alt="Healthy Veg Diet">
+                <div class="blog-content">
+                    <h3>Healthy Vegetarian Diet</h3>
+                    <p>Explore the benefits of a vegetarian lifestyle and delicious recipes to try.</p>
+                    <a href="https://www.eatingwell.com/article/7935824/vegetarian-diet-for-beginners/" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="https://img.freepik.com/premium-photo/juicy-gulab-jamun-jalebi-traditional-indian-sweet-jalebi-picture-photography_1020697-132600.jpg" alt="Desserts">
+                <div class="blog-content">
+                    <h3>Irresistible Indian Desserts</h3>
+                    <p>From gulab jamun to rasgulla, dive into the world of sweet Indian delights.</p>
+                    <a href="https://www.melaniemay.com/cooking-tips-for-indian-food/" target="_blank">Read More</a>
+                </div>
+            </div>
+
+            <div class="blog-post">
+                <img src="https://png.pngtree.com/thumb_back/fh260/background/20240325/pngtree-diwali-thali-sweets-foods-image_15694887.jpg" alt="Festival Foods">
+                <div class="blog-content">
+                    <h3>Festive Foods of India</h3>
+                    <p>Celebrate with traditional foods that make Indian festivals unforgettable.</p>
+                    <a href="https://andvijaysays.com/2020/12/20/an-amateur-cooks-guide-to-get-started-on-indian-cooking/" target="_blank">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

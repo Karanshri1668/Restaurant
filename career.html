@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Jai Bajrangbali</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.8em;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 2em;
+        }
+
+        p {
+            color: #555;
+            font-size: 1em;
+            margin: 20px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        .form-container {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .form-container h3 {
+            color: #333;
+            font-size: 1.5em;
+        }
+
+        .form-container label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-container input, 
+        .form-container textarea, 
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-container textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+
+        .form-container button:hover {
+            background-color: #e68900;
+        }
+
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 0.9em;
+            }
+
+            .form-container h3 {
+                font-size: 1.3em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Jai Bajrangbali - Pure Veg</div>
+    <div class="container">
+        <h2>Careers</h2>
+        <p>
+            Jai Bajrangbali is always looking for passionate individuals to join our team. 
+            If you are enthusiastic about delivering exceptional hospitality, 
+            we invite you to apply for one of our open positions.
+        </p>
+        <p>
+            Current openings include:
+            <ul style="text-align: left; display: inline-block;">
+                <li>Chef (Specialist in Indian Cuisine)</li>
+                <li>Kitchen Assistant</li>
+                <li>Waiter/Waitress</li>
+                <li>Receptionist</li>
+                <li>Delivery Executive</li>
+            </ul>
+        </p>
+
+        <div class="form-container">
+            <h3>Apply Now</h3>
+            <form action="submit_application.php" method="POST">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="position">Position Applied For</label>
+                <select id="position" name="position" required>
+                    <option value="">Select a position</option>
+                    <option value="chef">Chef</option>
+                    <option value="kitchen-assistant">Kitchen Assistant</option>
+                    <option value="waiter">Waiter/Waitress</option>
+                    <option value="receptionist">Receptionist</option>
+                    <option value="delivery-executive">Delivery Executive</option>
+                </select>
+
+                <label for="message">Why Should We Hire You?</label>
+                <textarea id="message" name="message" placeholder="Tell us why you are a great fit for the role" required></textarea>
+
+                <button type="submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

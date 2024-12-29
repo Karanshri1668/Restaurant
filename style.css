@@ -1,0 +1,779 @@
+/* html, body {
+    overflow: hidden;
+} */
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f0ef;
+}
+.page1{
+    width: 100%;
+    height: 100vh;
+    background: #ffe001;
+    position: relative;
+}
+.custom-shape-divider-bottom-1733164741 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1733164741 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 192px;
+}
+
+.custom-shape-divider-bottom-1733164741 .shape-fill {
+    fill: #FFFFFF;
+}
+
+ /* Ensure the nav bar styles are reset or controlled */
+header {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 10px; }
+
+nav{
+    display: flex;
+}
+nav .logo{
+    position: relative;
+    left: -110%;
+    top: 1em;
+    width: 300px;
+    height: 100px;
+}
+#nav-links {
+    position: relative;
+    top: 45px;
+    left: -5em;
+    list-style: none; /* Removes bullet points */
+    display: flex; /* Makes the list horizontal */
+    gap: 20px; /* Adds space between list items */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+#nav-links li {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+}
+
+#nav-links a {
+    text-decoration: none; 
+    /* Removes underline from links */
+    color: #333; /* Sets link color */
+    font-weight: bold; /* Makes the text bold */
+    text-transform: uppercase;
+}
+
+#nav-links a:hover {
+    color: #EC7823; /* Highlight color on hover */
+    cursor: pointer;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    /* justify-content: space-around; */
+}
+.slogan {
+    position: relative;
+    left: 5em;
+    top: 5em;
+    width: 40em;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden; /* Prevent overflow */
+    gap: 25px; 
+    transition: 0.5s;}
+
+/* Style the images */
+.slogan img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensure the image fits inside */
+}
+.title1{
+    width: 20em;
+}
+.title2{
+    width: 38em;
+}
+
+/* Style the text */
+.slogan h1 {
+    margin: 0;
+    font-size: 2em;
+    text-align: center;
+}
+
+/* Order button */
+.btn41-43 {
+    /* top: 10px; */
+    padding: 10px 35px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 800;
+    background: transparent;
+    outline: none !important;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .btn-43 {
+    border: 1px solid rgb(0, 0, 0);
+    z-index: 1;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase; 
+  }
+  
+  .btn-43:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+  }
+  
+  .btn-43:hover {
+    color: rgb(0, 0, 0);
+  }
+  
+  .btn-43:hover:after {
+    top: auto;
+    bottom: 0;
+    height: 100%;
+  }
+
+  /* Order button */
+.food{
+    position: relative;
+    top: -15em;
+    left: -2em;
+    float: right;
+    width: 33em;
+    height: 33em;
+    border-radius: 100%;
+    background: url('image/veg-thali.png') no-repeat center center;
+    background-size: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Page 2 Style */
+
+.page2{
+    width: 100vm;
+    height: 100vh;
+    margin: 10px;
+    padding: 10px;
+}
+
+.text-image-row {
+    position: relative;
+    top: -23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    text-align: center;
+    width: 100%; 
+    height: calc(100vh - 20px);  
+    margin: 10px; 
+    box-sizing: border-box; 
+}
+
+.body-text {
+    max-width: 80%; /* Control text width */
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px 0;
+    color: #333;
+}
+
+.menu-sec {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 0px; /* Space between grid items */
+    width: 100%; /* Full-width alignment */
+    max-width: 1200px; /* Restrict maximum width for alignment */
+}
+.yellow-bar{
+    position: absolute;
+    top: 300px;
+    left: 28px;
+    width: 95%;
+    height: 10em;
+    background-color: yellow;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.menu-sec img {
+    width: 320px;
+    height: 350px;
+    object-fit: cover; /* Ensure images are cropped neatly */
+}
+
+.menu-sec .col-1,
+.menu-sec .col-2,
+.menu-sec .col-3 {
+    /* height: auto; */
+    /* margin: 20px; */
+    padding: 15px;
+    text-align: center;
+}
+.menu-sec .col-1,
+.menu-sec .col-2,
+.menu-sec .col-3 {
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for the effect */
+}
+
+.menu-sec .col-1:hover,
+.menu-sec .col-2:hover,
+.menu-sec .col-3:hover {
+    /* box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px; */
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transform: translateY(-10px); /* Optional: Add a slight lift effect */
+}
+
+.menu-sec .col-1:not(:hover),
+.menu-sec .col-2:not(:hover),
+.menu-sec .col-3:not(:hover) {
+    box-shadow: none;
+}
+
+.btn41-4 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn41-4:hover {
+    background-color: #e68900;
+}
+.menu-sec .title-name{
+    font-weight: bolder;
+}
+
+
+/* General Styles for Page Sections */
+.page-section {
+    padding: 50px 5%;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page-section h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Testimonials Section */
+#testimonials {
+    background-color: #f8f8f8;
+}
+
+#testimonials .testimonial {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #555;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    max-width: 60%;
+}
+
+/* Gallery Section */
+#gallery .gallery-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+#gallery .gallery-items img {
+    width: calc(100% / 3 - 15px); /* Adjust width to fit 4 items per row */
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#gallery .gallery-items img:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+/* Special Offers Section */
+#offers {
+    background-color: #fff4e5;
+}
+
+#offers .offer {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    padding: 20px;
+    border: 2px solid #f4b400;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 60%;
+}
+
+#offers .offer h3 {
+    font-size: 24px;
+    color: #f4b400;
+}
+
+#offers .offer p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Blog Section */
+#blog .blog-post {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+}
+
+#blog .blog-post h3 {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+#blog .blog-post p {
+    font-size: 16px;
+    color: #666;
+}
+
+#blog .blog-post .btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #f4b400;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#blog .blog-post .btn:hover {
+    background-color: #dba000;
+}
+
+/* Careers Section */
+#careers {
+    background-color: #f0f4f8;
+}
+
+#careers a.btn {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+#careers a.btn:hover {
+    background-color: #0056b3;
+}
+
+#contact {
+    height: 100vh;
+    background: url('image/contact-page.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.contact-details {
+    width: 45%;
+    text-align: left;
+}
+
+.contact-details p {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#contact form {
+    width: 45%;
+    text-align: left;
+}
+
+#contact form input, 
+#contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#contact form button.btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact form button.btn:hover {
+    background-color: #218838;
+}
+
+footer{
+    text-align: center;
+}
+
+/* For Tablets (Portrait and Landscape) */
+@media (max-width: 768px) {
+    /* Navbar Adjustments */
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    #nav-links {
+        display: none; /* Hide nav links on small screens */
+        top: 10px;
+        left: 0;
+        gap: 10px;
+        margin: 0;
+    }
+
+    #nav-links li {
+        font-size: 1.2em;
+    }
+
+    /* Burger Menu Styles */
+    .burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+        transition: 0.3s;
+    }
+
+    /* Open Burger Menu */
+    .burger.open div:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.open div:nth-child(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    /* Show nav links when burger is clicked */
+    .burger.open + #nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    /* Adjust Navbar for Mobile */
+    nav {
+        display: block;
+        text-align: center;
+    }
+    nav .logo{
+    /* position: relative; */
+    left: -120%;
+    top: .2em;
+    width: 150px;
+    height: 50px;
+}
+
+    #nav-links {
+        display: none; /* Hide nav links */
+        top: 5px;
+        left: 0;
+        gap: 10px;
+        margin: 0;
+    }
+
+    #nav-links li {
+        font-size: 1.2em;
+    }
+
+    .burger {
+        /* width: 20px; */
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px;
+        transition: 0.3s;
+    }
+
+    /* Open Burger Menu */
+    .burger.open div:nth-child(1) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: 8px;
+    }
+
+    .burger.open div:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger.open div:nth-child(3) {
+        transform: rotate(45deg);
+        position: relative;
+        top: -8px;
+    }
+
+    /* Show nav links when burger is clicked */
+    .burger.open + #nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Slogan and Food Image Adjustments */
+    .slogan {
+        left: 2em;
+        top: 5em;
+        width: 80%;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .food {
+        display: none;
+    }
+    
+
+    /* Title Size adjustments */
+    .title1,
+    .title2 {
+        width: 100%;
+        font-size: 1.2em;
+    }
+    .slogan h1 {
+        margin: 0;
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .page2{
+        margin: 10px;
+        padding: 5px;
+    }
+    
+    .text-image-row {
+        position: relative;
+        top: 0%;
+        left: 7%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;
+        width: 80%; 
+        height: calc(100% - 20px);  
+        margin: 10px; 
+    }
+    
+    .body-text {
+        max-width: 100%; /* Control text width */
+        font-size: 10px;
+        line-height: 1.6;
+        margin: 20px 0;
+        color: #333;
+    }
+    .sub_title_3{
+        width: 20em;
+    }
+    
+    .menu-sec {
+        position: relative;
+        grid-template-columns: 1fr;
+        width: 25%; 
+        left: -52%;
+        gap: 10px;
+    }
+    .yellow-bar{
+        display: none;
+    }
+    
+    .menu-sec .col-1 img,
+    .menu-sec .col-2 img,
+    .menu-sec .col-3 img {
+        width: 150px;
+        height: 175px;
+        object-fit: cover; 
+    }
+    
+    .menu-sec .col-1,
+    .menu-sec .col-2,
+    .menu-sec .col-3 {
+        width: 335px;
+        height: 150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: small;
+        padding: 10px;
+    }
+    .menu-sec .col-1,
+    .menu-sec .col-2,
+    .menu-sec .col-3 {
+        transition: box-shadow 0.3s ease, transform 0.3s ease; 
+    }
+    
+    .menu-sec .col-1:hover,
+    .menu-sec .col-2:hover,
+    .menu-sec .col-3:hover {
+        
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+        transform: translateY(-10px); 
+    }
+    
+    .menu-sec .col-1:not(:hover),
+    .menu-sec .col-2:not(:hover),
+    .menu-sec .col-3:not(:hover) {
+        box-shadow: none;
+    }
+    .body-text-3{
+        display: none;
+    }
+    .menu-sec .title-name{
+        font-weight: bolder;
+    }
+
+
+
+    /* Page sections adjustments */
+    .page-section {
+        padding: 15px 5%;
+    }
+    .contact-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-details{
+        display: flex;
+        font-size: 11px;
+        gap: 5px;
+    }
+    #contact form {
+        width: 90%;
+        text-align: left;
+
+    }
+    
+footer{
+        padding: 5px;
+}
+}
+

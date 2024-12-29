@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kings&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Ribeye+Marrow&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-family: "Ribeye Marrow", serif;
+            font-weight: 500;
+            font-size: 1.8em;
+            /* padding: 10px; */
+        }
+        .header a{
+            font-family: "Montserrat", sans-serif;
+            text-decoration: none; 
+            color: #333; /* Sets link color */
+            font-weight: bold; /* Makes the text bold */
+            font-size: .8em;
+            text-transform: uppercase;
+            /* float: right; */
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 50px;
+        }
+
+        .categories {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .category-btn {
+            padding: 15px 30px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .category-btn:hover {
+            background-color: #e68900;
+        }
+
+        .food-list {
+            display: none;
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .food-item {
+            margin-bottom: 20px;
+        }
+
+        .food-item img {
+            width: 100%;
+            max-width: 150px;
+            border-radius: 8px;
+        }
+
+        .food-item p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .order-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #ff9800;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .add-to-cart{
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: #F4B400 ;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .order-btn:hover {
+            background-color: #e68900;
+        }
+        #cart-summary {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ff9800;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        #cart-summary button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            background-color: white;
+            color: #ff9800;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #cart-summary button:hover {
+            background-color: #e68900;
+            color: white;
+        }
+        @media (max-width: 480px) {
+    .header {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    .header a {
+        font-size: 0.6em;
+        float: none;
+        display: block;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .container {
+        width: 90%;
+        padding: 10px 5px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+
+    .category-btn {
+        display: block;
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 5px auto;
+        width: 90%;
+    }
+
+    .food-item {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .food-item img {
+        max-width: 80px;
+    }
+
+    .food-item p {
+        font-size: 14px;
+    }
+
+    .order-btn,
+    .add-to-cart {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    #cart-summary {
+        font-size: 12px;
+        padding: 5px 0;
+    }
+
+    #cart-summary button {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        Jai Bajrangbali Hotel <br>
+        <a href="index.html">Home</a>
+    </div>
+
+    <div class="container">
+        <h1>Menu</h1>
+
+        <!-- Categories Section -->
+        <div class="categories">
+            <a href="javascript:void(0)" class="category-btn" onclick="showFoodItems('southIndian')">South Indian</a>
+            <a href="javascript:void(0)" class="category-btn" onclick="showFoodItems('midIndian')">Mid Indian</a>
+            <a href="javascript:void(0)" class="category-btn" onclick="showFoodItems('northIndian')">North Indian</a>
+        </div>
+
+        <!-- South Indian Food List -->
+        <div id="southIndian" class="food-list">
+            <div class="food-item">
+                <img src="image/S-Dosa-removebg-preview.png" alt="Dosa">
+                <p><strong>Dosa</strong> - Crispy rice crepes served with chutneys.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Dosa" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/S-Idli-removebg-preview.png" alt="Idli">
+                <p><strong>Idli</strong> - Soft steamed rice cakes served with sambar and chutney.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Idli" data-price="20">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/S-Vada-removebg-preview.png" alt="Vada">
+                <p><strong>Vada</strong> - Crispy fried doughnuts made from urad dal.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Vada" data-price="30">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/S-sambar-rice-removebg-preview.png" alt="Sambar Rice">
+                <p><strong>Sambar Rice</strong> - Rice served with tangy and spicy lentil soup.</p>
+                <p><strong>Price -</strong> 50₹</p>
+                <button class="add-to-cart" data-name="Sambar Rice" data-price="50">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/S-curd-rice-removebg-preview.png" alt="Curd Rice">
+                <p><strong>Curd Rice</strong> - Rice mixed with yogurt, served with a side of pickle.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Curd Rice" data-price="10">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Mid Indian Food List -->
+        <div id="midIndian" class="food-list">
+            <div class="food-item">
+                <img src="image/M-Pakora.png" alt="Pakora">
+                <p><strong>Pakora</strong> - Deep-fried fritters made with chickpea flour and spices.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Pakora" data-price="15">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/M-Aloo_Paratha-removebg-preview.png" alt="Aloo Paratha">
+                <p><strong>Aloo Paratha</strong> - Stuffed flatbread with spiced mashed potatoes.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Aloo Paratha" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/M-Puri_Bhaji-removebg-preview.png" alt="Puri Bhaji">
+                <p><strong>Puri Bhaji</strong> - Deep-fried bread served with spicy potato curry.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Puri Bhaji" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/M-Chole_Bhature-removebg-preview.png" alt="Chole Bhature">
+                <p><strong>Chole Bhature</strong> - Spicy chickpea curry served with deep-fried bread.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Chole Bhature" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/M-Vegetable_Biryani-removebg-preview.png" alt="Vegetable Biryani">
+                <p><strong>Vegetable Biryani</strong> - Spiced rice with mixed vegetables and herbs.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Vegetable Biryani" data-price="10">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- North Indian Food List -->
+        <div id="northIndian" class="food-list">
+            <div class="food-item">
+                <img src="image/palak-paneer.jpg" alt="Palak Paneer">
+                <p><strong>Palak Paneer</strong> - Spinach curry with cubes of paneer (Indian cheese).</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Palak paneer" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/vegetable-kofta.jpg" alt="Vegetable Kofta">
+                <p><strong>Vegetable Kofta</strong> - Fried vegetable balls served in a rich gravy.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Vegetable Kofta" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/baingan-bharta.jpg" alt="Baingan Bharta">
+                <p><strong>Baingan Bharta</strong> - Roasted eggplant cooked with tomatoes and spices.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Baingan Bharta" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/kadhi-pakora.jpg" alt="Kadhi Pakora">
+                <p><strong>Kadhi Pakora</strong> - Gram flour fritters in a tangy yogurt curry.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Kadhi pakora" data-price="10">Add to Cart</button>
+            </div>
+            <div class="food-item">
+                <img src="image/naan.jpg" alt="Naan">
+                <p><strong>Naan</strong> - Soft and fluffy Indian bread baked in a tandoor.</p>
+                <p><strong>Price -</strong> 10₹</p>
+                <button class="add-to-cart" data-name="Naan" data-price="10">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-summary">
+        <span id="cart-total">0 items in cart</span>
+        <button onclick="window.location.href='confirm.html'">Go to Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
