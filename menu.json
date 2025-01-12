@@ -6,31 +6,31 @@
           {
             "name": "Dosa",
             "description": "Crispy rice crepes served with chutneys.",
-            "price": 10,
+            "price": 60,
             "image": "S-Dosa-removebg-preview.png"
           },
           {
             "name": "Idli",
             "description": "Soft steamed rice cakes served with sambar and chutney.",
-            "price": 10,
+            "price": 40,
             "image": "S-Idli-removebg-preview.png"
           },
           {
             "name": "Vada",
             "description": "Crispy fried doughnuts made from urad dal.",
-            "price": 10,
+            "price": 40,
             "image": "S-Vada-removebg-preview.png"
           },
           {
             "name": "Sambar Rice",
             "description": "Rice served with tangy and spicy lentil soup.",
-            "price": 50,
+            "price": 115,
             "image": "S-sambar-rice-removebg-preview.png"
           },
           {
             "name": "Curd Rice",
             "description": "Rice mixed with yogurt, served with a side of pickle.",
-            "price": 10,
+            "price": 210,
             "image": "S-curd-rice-removebg-preview.png"
           }
         ]
@@ -41,31 +41,31 @@
           {
             "name": "Pakora",
             "description": "Deep-fried fritters made with chickpea flour and spices.",
-            "price": 15,
+            "price": 30,
             "image": "M-Pakora.png"
           },
           {
             "name": "Aloo Paratha",
             "description": "Stuffed flatbread with spiced mashed potatoes.",
-            "price": 10,
+            "price": 50,
             "image": "M-Aloo_Paratha-removebg-preview.png"
           },
           {
             "name": "Puri Bhaji",
             "description": "Deep-fried bread served with spicy potato curry.",
-            "price": 10,
+            "price": 50,
             "image": "M-Puri_Bhaji-removebg-preview.png"
           },
           {
             "name": "Chole Bhature",
             "description": "Spicy chickpea curry served with deep-fried bread.",
-            "price": 10,
+            "price": 40,
             "image": "M-Chole_Bhature-removebg-preview.png"
           },
           {
             "name": "Vegetable Biryani",
             "description": "Spiced rice with mixed vegetables and herbs.",
-            "price": 10,
+            "price": 250,
             "image": "M-Vegetable_Biryani-removebg-preview.png"
           }
         ]
@@ -76,31 +76,31 @@
           {
             "name": "Palak Paneer",
             "description": "Spinach curry with cubes of paneer (Indian cheese).",
-            "price": 10,
+            "price": 150,
             "image": "Palak_Panee.png"
           },
           {
             "name": "Vegetable Kofta",
             "description": "Fried vegetable balls served in a rich gravy.",
-            "price": 10,
+            "price": 200,
             "image": "Vegetable_Kofta.png"
           },
           {
             "name": "Baingan Bharta",
             "description": "Roasted eggplant cooked with tomatoes and spices.",
-            "price": 10,
+            "price": 60,
             "image": "Baingan_Bharta.png"
           },
           {
             "name": "Kadhi Pakora",
             "description": "Gram flour fritters in a tangy yogurt curry.",
-            "price": 10,
+            "price": 70,
             "image": "Kadhi_Pakora.png"
           },
           {
             "name": "Naan",
             "description": "Soft and fluffy Indian bread baked in a tandoor.",
-            "price": 10,
+            "price": 20,
             "image": "Naan.png"
           }
         ]
