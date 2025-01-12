@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        .header {
+            background-color: #4caf50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+
+        .cart-item span {
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+        }
+
+        .quantity button {
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .quantity button:hover {
+            background-color: #43a047;
+        }
+
+        .quantity input {
+            width: 40px;
+            text-align: center;
+            margin: 0 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            color: #4caf50;
+        }
+
+        .checkout {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #ff5722;
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .checkout:hover {
+            background-color: #e64a19;
+        }
+
+        .back-menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .back-menu a {
+            color: #4caf50;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        .back-menu a:hover {
+            text-decoration: underline;
+        }
+     /* Improved Modal Styling */
+#checkout-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #101212, #f7f7f712);
+    border: 1px solid #ddd;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.432);
+    border-radius: 15px;
+    z-index: 1000;
+    padding: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    overflow: hidden;
+}
+
+/* Modal Active State */
+#checkout-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Close Button Styling */
+#checkout-modal .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    line-height: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#checkout-modal .close-btn:hover {
+    background: #e64a19;
+}
+
+/* Modal Header */
+#checkout-modal .modal-header {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #4caf50;
+}
+
+/* Modal Footer */
+#checkout-modal .modal-footer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+    #checkout-iframe {
+        width: 90%;
+        max-width: 800px;
+        height: 90%;
+        border: none;
+        border-radius: 10px;
+        background: white;
+    }
+    @media (max-width: 600px) {
+        /* Adjust the modal for smaller screens */
+        #checkout-modal {
+            width: 90%; /* Make modal width responsive */
+            height: 80%; /* Let the height adjust based on content */
+            max-height: 90%; /* Limit the height to avoid overflow */
+            padding: 10px; /* Reduce padding */
+            border-radius: 10px; /* Slightly reduce border radius for smaller screens */
+            overflow-y: auto; /* Allow vertical scrolling if content overflows */
+        }
+
+        /* Adjust modal header for readability on mobile */
+        #checkout-modal .modal-header {
+            font-size: 1.2rem; /* Decrease font size */
+            margin-bottom: 10px; /* Adjust spacing */
+        }
+
+        /* Adjust the close button size */
+        #checkout-modal .close-btn {
+            width: 25px; /* Make the button smaller */
+            height: 25px;
+            font-size: 14px; /* Adjust font size */
+            line-height: 25px; /* Center align text inside button */
+        }
+
+        /* Ensure iframe fits the modal */
+        #checkout-iframe {
+            width: 100%; /* Use full width of the modal */
+            height: calc(100% - 60px); /* Subtract space for padding/header/footer */
+            max-height: 80vh; /* Limit height to viewport height */
+            border-radius: 8px; /* Adjust border radius for consistency */
+        }
+    }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        Billing Section
+    </div>
+
+    <div class="container">
+        <div id="cart-items">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+        <p class="total">Total: ₹<span id="total-price">0</span></p>
+        <button class="checkout" onclick="openCheckout()">Proceed to Checkout</button>
+        <div class="back-menu">
+            <a href="menu.html">Go Back to Menu</a>
+        </div>
+    </div>
+
+    <!-- Add this to the Billing Page Body -->
+    <div id="checkout-modal">
+        <!-- Close Button -->
+        <button class="close-btn" onclick="closeCheckout()">×</button>
+    
+        <!-- Modal Header -->
+        <div class="modal-header">Order Summary</div>
+    
+        <!-- Iframe Content -->
+        <iframe src="checkout.html" id="checkout-iframe"></iframe>
+    </div>
+    
+    <script>
+        
+        const cartItemsContainer = document.getElementById('cart-items');
+const totalPriceElement = document.getElementById('total-price');
+
+// Fetch cart items from localStorage
+const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+function renderCart() {
+    cartItemsContainer.innerHTML = '';
+    let total = 0;
+
+    cartItems.forEach((item, index) => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.className = 'cart-item';
+
+        cartItemDiv.innerHTML = `
+            <span>${item.name}</span>
+            <div class="quantity">
+                <button onclick="updateQuantity(${index}, -1)">-</button>
+                <input type="text" value="${item.quantity}" readonly>
+                <button onclick="updateQuantity(${index}, 1)">+</button>
+            </div>
+            <span>₹${item.price * item.quantity}</span>
+            <button class="remove-item" onclick="removeItem(${index})">Remove</button>
+        `;
+
+        cartItemsContainer.appendChild(cartItemDiv);
+        total += item.price * item.quantity;
+    });
+
+    totalPriceElement.textContent = total;
+}
+
+function updateQuantity(index, change) {
+    if (cartItems[index].quantity + change > 0) {
+        cartItems[index].quantity += change;
+        localStorage.setItem('cart', JSON.stringify(cartItems));
+        renderCart();
+    }
+}
+function removeItem(index) {
+    // Remove item from cart
+    cartItems.splice(index, 1);
+    
+    // Update the cart in localStorage
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    
+    // Re-render the cart
+    renderCart();
+}
+
+function checkout() {
+    if (cartItems.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+
+    alert('Thank you for your order! Proceeding to payment...');
+    localStorage.removeItem('cart');
+    window.location.href = 'menu.html'; // Redirect after checkout
+}
+
+renderCart();
+    
+
+    function openCheckout() {
+    if (cartItems.length === 0) {
+        alert('Your cart is empty!');
+        return;
+    }
+
+    // Save cart data to localStorage for the Checkout Modal
+    localStorage.setItem('checkoutCart', JSON.stringify(cartItems));
+
+    // Open Checkout Modal
+    const checkoutModal = document.getElementById('checkout-modal');
+    checkoutModal.classList.add('active');
+}
+
+function closeCheckout() {
+    const checkoutModal = document.getElementById('checkout-modal');
+    checkoutModal.classList.remove('active');
+}
+
+
+    </script>
+</body>
+</html>

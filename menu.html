@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Page</title>
+   <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#cart {
+  font-size: 16px;
+}
+
+main {
+  padding: 20px;
+}
+
+#menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.food-item {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+/* .food-item:hover {
+    transform: scale(1.05);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+} */
+.food-list{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.food-item img {
+  width: 175px;
+  height: 175px;
+  /* width: 100%;
+  height: auto; */
+  border-radius: 5px;
+}
+#cart-total{
+  color: #000;
+  font-weight: bold;
+}
+
+/* CSS */
+.button-24,
+.add-to-cart {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+.add-to-cart:hover,
+.add-to-cart:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button-24:active {
+  opacity: .5;
+}
+.add-to-cart:active {
+  opacity: .5;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    #cart {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    #menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px; /* Reduced the gap between items */
+    }
+
+    .food-item {
+        width: 48%;  /* Each item will take 48% width, which means 2 items per row */
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+        margin-bottom: 15px; /* Spacing between rows */
+    }
+
+    .food-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .food-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    footer {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    #cart {
+        font-size: 12px;
+    }
+    
+    .food-item {
+  width: 142px;
+  padding: 10px;
+}
+
+.food-list{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.food-item img {
+  width: 150px;
+  height: 200px;
+}
+
+    .button-24,
+    .add-to-cart {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+   </style>
+</head>
+<body>
+  <header>
+    <h1>Food Menu</h1>
+    <div id="cart">
+      <span id="cart-total">0 items in cart</span>
+      <button onclick="window.location.href='billing.html'" class="button-24">Go to Cart</button>
+    </div>
+  </header>
+
+  <main id="menu-container">
+    <!-- Menu items will be dynamically loaded here -->
+  </main><br><br><br><br>
+
+
+  <footer>
+    <p>© 2025 Foodies Hub. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
