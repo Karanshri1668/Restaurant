@@ -116,7 +116,17 @@ main {
 .add-to-cart:active {
   opacity: .5;
 }
+#floating-cart {
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  z-index: 1000;
+}
 
+#floating-cart .button-24 {
+  padding: 15px 20px;
+  font-size: 16px;
+}
 footer {
   text-align: center;
   padding: 10px;
@@ -221,8 +231,11 @@ footer {
   <header>
     <h1>Food Menu</h1>
     <div id="cart">
-      <span id="cart-total">0 items in cart</span>
-      <button onclick="window.location.href='billing.html'" class="button-24">Go to Cart</button>
+     <div id="floating-cart">
+        <button onclick="window.location.href='billing.html'" class="button-24">
+          <span id="cart-total">0</span>
+          <i class="fas fa-shopping-cart"></i>
+        </button>
     </div>
   </header>
 
