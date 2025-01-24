@@ -115,7 +115,7 @@ function attachAddToCartHandlers() {
     let cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Update cart count
-    cartSummary.textContent = `${cartItems.length} items in cart`;
+    cartSummary.textContent = `${cartItems.length} items`;
 
     document.querySelectorAll(".add-to-cart").forEach((button) => {
         button.addEventListener("click", () => {
